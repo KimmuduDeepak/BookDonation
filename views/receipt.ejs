@@ -1,0 +1,80 @@
+<%- include('partials/header') %>
+
+<h2 style="text-align: center;">Donation Receipt</h2>
+
+<div class="receipt-box" id="receipt">
+  <p><strong>Donor Name:</strong> <%= donorName %></p>
+  <p><strong>Book Name:</strong> <%= donation.bookName %></p>
+  <p><strong>Quantity:</strong> <%= donation.quantity %></p>
+  <p><strong>Expiry Date:</strong> <%= donation.expiryDate.toDateString() %></p>
+  <p><strong>Date of Donation:</strong> <%= donation.donationDate.toDateString() %></p>
+
+  <p class="thank-you">🙏 Thank you for your generous donation!</p>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+  <button onclick="window.print()">🖨️ Print Receipt</button>
+</div>
+
+<!-- ✅ View Dashboard Button -->
+<div style="text-align: center; margin-top: 20px;">
+  <a href="/dashboard" class="dashboard-btn">📄 View Dashboard</a>
+</div>
+
+<style>
+  .receipt-box {
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 0 20px rgba(32, 201, 151, 0.2);
+    color: #961717;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .receipt-box p {
+    margin: 10px 0;
+  }
+
+  .thank-you {
+    font-size: 22px;
+    color: #20c997;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  button {
+    background-color: #20c997;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #17a589;
+  }
+
+  .dashboard-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .dashboard-btn:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<%- include('partials/footer') %>

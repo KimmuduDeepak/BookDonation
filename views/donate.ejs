@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate Medicine</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('/background1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #920909;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-box {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(32, 201, 151, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #7c1b1b;
+    }
+
+    button {
+      background-color: #20c997;
+      color: rgb(128, 27, 27);
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #17a589;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Donate Books</h2>
+    <form action="/donate" method="POST">
+      <input type="text" name="bookName" placeholder="Book Name" required>
+      <input type="number" name="quantity" placeholder="Quantity" required>
+      <input type="date" name="expiryDate" placeholder="Expiry Date" required>
+      <button type="submit">Donate</button>
+    </form>
+  </div>
+</body>
+</html>
